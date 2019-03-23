@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
+//import components
 import CharDisplay from './CharDisplay'
 
 export default class CharDisplayContainer extends Component {

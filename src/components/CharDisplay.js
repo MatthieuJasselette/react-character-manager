@@ -8,6 +8,7 @@ export default class CharDisplay extends Component {
     return (
       <div>
         <Link to={"/"}>Get me back to the list.</Link>
+        <Link to={"/char-create-container-"}>Create a character</Link>
         <div>
           <p>This is the CharDisplay page</p>
           <h5>{this.props.package.name}</h5>

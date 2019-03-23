@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../assets/logo.svg';
 import '../css/App.css';
+
 //import components
 import AppRoute from './AppRoute';
 

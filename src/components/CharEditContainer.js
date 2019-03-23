@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
+//import components
 import CharEdit from './CharEdit'
 
 export default class CharEditContainer extends Component {
