@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown';
+
+import NavBar from './NavBar.js';
 
 export default class CharDisplay extends Component {
   render() {
     return (
       <div>
-        <Link to={"/"}>Get me back to the list.</Link>
-        <Link to={"/char-create-container-"}>Create a character</Link>
+        <NavBar message="DisplayPage"/>
         <div>
           <p>This is the CharDisplay page</p>
           <h5>{this.props.package.name}</h5>

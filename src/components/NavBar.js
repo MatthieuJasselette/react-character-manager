@@ -2,16 +2,14 @@ import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 
-import ConfirmModalContainer from'./ConfirmModalContainer.js';
-
-export default class CharCreate extends Component {
+export default class NavBar extends Component {
   render() {
     return (
       <div>
+        {this.props.message}
         <Link to={"/"}>Get me back to the list.</Link>
-        <p>This is the CharCreate page</p>
-        <ConfirmModalContainer message="CharCreatePage"/>
+        <Link to={"/char-create-container"}>Create a character</Link>
       </div>
-    );
+      );
+    }
   }
-}

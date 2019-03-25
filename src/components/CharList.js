@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import {Card} from 'react-bootstrap';
+// import ReactDOM from 'react-dom';
+import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export default class CharList extends Component {
@@ -9,7 +9,7 @@ export default class CharList extends Component {
       <React.Fragment>
         <div>
           <div>
-            <Link to={"/char-create-container-"}>Create a character</Link>
+        <Link to={"/char-create-container"}>Create a character</Link>
           </div>
           <div>
            {this.props.package.map(character =>
