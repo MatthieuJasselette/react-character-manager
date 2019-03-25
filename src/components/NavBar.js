@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 export default class NavBar extends Component {
   render() {
     return (
       <div>
-        {this.props.message}
-        <Link to={"/"}>Get me back to the list.</Link>
-        <Link to={"/char-create-container"}>Create a character</Link>
+        <Link to={"/"}><Button variant="primary">Get me back to the list.</Button></Link>
+        <Link to={"/char-create-container"}><Button variant="primary">Create a character</Button></Link>
       </div>
       );
     }

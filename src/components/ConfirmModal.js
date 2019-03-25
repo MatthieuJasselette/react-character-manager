@@ -14,9 +14,9 @@ export default class ConfirmModal extends React.Component {
 
         <Modal show={this.props.show} onHide={this.props.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>Confirmation required</Modal.Title>
           </Modal.Header>
-          <Modal.Body>You called this modal from {this.props.message}</Modal.Body>
+          <Modal.Body>{this.props.message}</Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={this.props.handleClose}>
               Close
