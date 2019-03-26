@@ -8,8 +8,8 @@ export default class ConfirmModal extends React.Component {
   render() {
     return (
       <>
-        <Button variant="primary" onClick={this.props.handleShow}>
-          Submit
+        <Button variant={this.props.variant} onClick={this.props.handleShow}>
+          {this.props.label}
         </Button>
 
         <Modal show={this.props.show} onHide={this.props.handleClose}>
@@ -19,10 +19,10 @@ export default class ConfirmModal extends React.Component {
           <Modal.Body>{this.props.message}</Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={this.props.handleClose}>
-              Close
+              No
             </Button>
-            <Button variant="primary" onClick={this.props.handleClose}>
-              Save Changes
+            <Button variant="primary" onClick={this.props.onClick}>
+              Yes
             </Button>
           </Modal.Footer>
         </Modal>

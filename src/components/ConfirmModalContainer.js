@@ -32,6 +32,9 @@ export default class ConfirmModalContainer extends React.Component {
         handleShow={this.handleShow}
         show={this.state.show}
         message={this.props.message}
+        onClick={this.props.onClick}
+        variant={this.props.variant}
+        label={this.props.label}
       />
     );
   }

@@ -19,7 +19,12 @@ export default class CharDisplay extends Component {
           <ReactMarkdown source={this.props.package.description} />
         </div>
         <Link to={"/char-edit-container-"+this.props.package.id}><Button>Edit this fool !</Button></Link>
-        <ConfirmModalContainer message="Do you desire to erase this character ?" />
+      <ConfirmModalContainer
+        message="Do you want to erase this character ?"
+        variant="danger"
+        label="Erase this wretch !"
+        onClick={this.props.deleteCharacter}
+        />
       </div>
     );
   }

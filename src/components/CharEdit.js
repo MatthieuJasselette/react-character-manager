@@ -23,10 +23,18 @@ export default class CharEdit extends Component {
             </Form.Group>
             <Form.Group controlId="createForm.ControlTextarea1">
               <Form.Label>Write an extensive description:</Form.Label>
-              <Form.Control as="textarea" rows="3" placeholder={this.props.package.description}/>
+              <Form.Control as="textarea" rows="8" placeholder={this.props.package.description}/>
+            </Form.Group>
+            <Form.Group controlId="createForm.ControlInput4">
+              <Form.Label>Pick a picture of the character:</Form.Label>
+              <Form.Control className="browse-input" type="file" onChange={this.props.onChangeImage}/>
             </Form.Group>
           </Form>
-          <ConfirmModalContainer message="Do you want to Save these changes ?"/>
+          <ConfirmModalContainer
+            message="Do you want to Save these changes ?"
+            variant="primary"
+            label="Submit changes"
+            onClick=""/>
         </div>
       </div>
     );

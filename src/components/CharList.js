@@ -18,8 +18,8 @@ export default class CharList extends Component {
         <Container>
           <Row>
             {this.props.package.map(character =>
-              <Col xs={6} md={4}>
-                <Card bg="dark" style={{ width: '18rem', marginBottom: '0.5rem' }} key={character.id}>
+              <Col xs={6} md={4} key={character.id}>
+                <Card bg="dark" style={{ width: '18rem', marginBottom: '0.5rem' }} >
                   <div>
                     <img src={"data:image;base64,"+character.image} />
                   </div>
@@ -28,7 +28,7 @@ export default class CharList extends Component {
                       <h3>{character.name}</h3>
                     </Card.Title>
                     <Card.Text>
-                      <p>{character.shortDescription}</p>
+                      {character.shortDescription}
                     </Card.Text>
                     <Link to={"/char-display-container-"+character.id}><Button variant="secondary">Display more info</Button></Link>
                   </Card.Body>

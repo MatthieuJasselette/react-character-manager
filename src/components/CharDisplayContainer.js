@@ -25,7 +25,7 @@ export default class CharDisplayContainer extends Component {
   deleteCharacter = () => {
     axios
     .delete('https://character-database.becode.xyz/characters/'+this.props.match.params.id)
-    .then(this.getCharacter())
+    .then(this.props.history.push('/'))
     .catch(err => console.log(err))
   }
 
@@ -40,7 +40,7 @@ export default class CharDisplayContainer extends Component {
 
   render() {
     return (
-      <CharDisplay package={this.state.character}/>
+      <CharDisplay package={this.state.character} deleteCharacter={this.deleteCharacter}/>
     );
   }
 }
