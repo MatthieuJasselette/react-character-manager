@@ -1,0 +1,44 @@
+<CharCreate
+  onSubmit={this.onSubmit}
+  imagePreview={$imagePreview}
+  _handleChangeImage={this._handleChangeImage}
+  onChangeImage={this.onChangeImage}
+  onChangeShortDescription={this.onChangeShortDescription}
+  onChangeDescription={this.onChangeDescription}
+  onChangeName={this.onChangeName}/>
+
+
+  import { Link } from 'react-router-dom';
+  import { Button } from 'react-bootstrap';
+  import { Form } from 'react-bootstrap';
+
+  import ConfirmModalContainer from'./ConfirmModalContainer.js';
+
+  <div>
+    <Link to={"/"}><Button>Get me back to the list.</Button></Link>
+    <Form>
+      <Form.Group controlId="createForm.ControlInput1">
+        <Form.Label>Name of the character:</Form.Label>
+        <Form.Control type="text" onChange={this.onChangeName}/>
+      </Form.Group>
+      <Form.Group controlId="createForm.ControlInput2">
+        <Form.Label>Write a short description:</Form.Label>
+        <Form.Control type="text" onChange={this.onChangeShortDescription}/>
+      </Form.Group>
+      <Form.Group controlId="createForm.ControlTextarea1">
+        <Form.Label>Write an extensive description:</Form.Label>
+        <Form.Control as="textarea" rows="8" onChange={this.onChangeDescription}/>
+      </Form.Group>
+      <Form.Group controlId="createForm.ControlInput4">
+        <Form.Label>Pick a picture of the character:</Form.Label>
+        <Form.Control className="browse-input" type="file" onChange={(e)=>this._handleChangeImage(e)}/>
+        {$imagePreview}
+      </Form.Group>
+    </Form>
+    <ConfirmModalContainer
+    message="Do you want to add this character ?"
+    variant="primary"
+    label="Submit changes"
+    onClick={this.onSubmit}
+    />
+  </div>

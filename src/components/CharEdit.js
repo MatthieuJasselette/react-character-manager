@@ -15,15 +15,15 @@ export default class CharEdit extends Component {
           <Form>
             <Form.Group controlId="createForm.ControlInput1">
               <Form.Label>Name of the character:</Form.Label>
-              <Form.Control type="text" placeholder={this.props.package.name}/>
+              <Form.Control type="text" defaultValue={this.props.package.name}/>
             </Form.Group>
             <Form.Group controlId="createForm.ControlInput2">
               <Form.Label>Write a short description:</Form.Label>
-              <Form.Control type="text" placeholder={this.props.package.shortDescription}/>
+              <Form.Control type="text" defaultValue={this.props.package.shortDescription}/>
             </Form.Group>
             <Form.Group controlId="createForm.ControlTextarea1">
               <Form.Label>Write an extensive description:</Form.Label>
-              <Form.Control as="textarea" rows="8" placeholder={this.props.package.description}/>
+              <textarea className="form-control" rows="8">{this.props.package.description}</textarea>
             </Form.Group>
             <Form.Group controlId="createForm.ControlInput4">
               <Form.Label>Pick a picture of the character:</Form.Label>

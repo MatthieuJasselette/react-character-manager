@@ -27,7 +27,8 @@ export default class CharCreate extends Component {
           </Form.Group>
           <Form.Group controlId="createForm.ControlInput4">
             <Form.Label>Pick a picture of the character:</Form.Label>
-            <Form.Control className="browse-input" type="file" onChange={this.props.onChangeImage}/>
+            <Form.Control className="browse-input" type="file" onChange={(e)=>this.props._handleChangeImage(e)}/>
+            {this.props.imagePreview}
           </Form.Group>
         </Form>
         <ConfirmModalContainer
